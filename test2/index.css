@@ -5,6 +5,9 @@
     font-family: "Caveat","Hannari";
     font-size: 24px;
     color: #5a5858;
+    user-select: none;
+    margin: 0;
+    padding: 0;
 }
 
 ul {
@@ -22,8 +25,6 @@ li {
 }
 
 table {
-    background-color: burlywood;
-    border-radius: 30px;
     width: 270px;
 }
 
@@ -34,7 +35,7 @@ thead {
 
 tbody {
     background-color: #f2f2f2;
-    height: 300px;
+    /* height: 300px; */
 }
 
 tfoot {
@@ -46,13 +47,42 @@ thead th {
     border-radius: 10px 10px 0 0;
     padding-top: 6px;
     padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 0px;
 }
 
 tfoot td {
     border-radius: 0 0 10px 10px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
-td {
-    padding-top: 6px;
-    padding-left: 8px;
+/* tbody td {
+
+} */
+
+p {
+    display: block;
+    background-color: #e2e2e2;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    height: 32px;
+    border-radius: 3px;
 }
+
+input {
+    height: 22px;
+    line-height: 22px;
+    overflow:hidden;
+    resize: none;
+    border-radius: 3px;
+    padding-bottom: 6px;
+    margin-top: -2px;
+    border: 0;
+    margin-top: 0px;
+    background-color: #e2e2e2;
+}
+
