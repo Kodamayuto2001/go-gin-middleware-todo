@@ -1,0 +1,55 @@
+header {
+    background-color: aqua;
+    height: 48px;
+    width: 100%;
+}
+
+main {
+    background-color: #eeee;
+    display: flex;
+    width: 100%;
+}
+
+ul {
+    background-color: #dddd;
+    display: flex;
+}
+
+li {
+    background-color: #cccc;
+}
+
+.first {
+    background-color: bisque;
+}
+
+.second {
+    background-color: cadetblue;
+}
+
+.third {
+    background-color: chocolate;
+}
+
+.card {
+    padding: 10px;
+    /* border: 1rem solid #ebecf0; */
+    border-radius: 20%;
+}
+
+table {
+    display: table;
+    background-color: darkseagreen;
+}
+
+thead {
+    display: table-header-group;
+}
+
+tbody {
+    display: table-row-group;
+}
+
+tfoot {
+    display: table-footer-group;
+}
