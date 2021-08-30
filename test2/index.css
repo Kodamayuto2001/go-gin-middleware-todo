@@ -80,9 +80,8 @@ input {
     resize: none;
     border-radius: 3px;
     padding-bottom: 6px;
-    margin-top: -2px;
-    border: 0;
-    margin-top: 0px;
+    border: none;
+    outline: none;
     background-color: #e2e2e2;
 }
 
