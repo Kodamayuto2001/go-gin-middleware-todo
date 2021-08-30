@@ -1,5 +1,4 @@
 # go-gin-middleware-todo
 
-# やわらかいとぅどぅりすとを作る。
-
-![image](https://user-images.githubusercontent.com/55943803/131339082-715f25cf-f685-410b-bbb0-3de6fb31a4ba.png)
+# ToDoリストをつくる
+![image](https://user-images.githubusercontent.com/55943803/131416904-8f3495fe-c1f1-4950-8dc8-3016eaaebc47.png)
