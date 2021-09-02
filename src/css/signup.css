@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat);
+@import url('https://fonts.googleapis.com/earlyaccess/hannari.css');
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+
+header {
+    height: 40px;
+    background-color: aliceblue;
+}
+
+main {
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #0c162d;
+    height: 256px;
+    width: 512px;
+    border-radius: 6px;
+    border: 1px solid #202637;
+    color: #627597;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+}
+
+table {
+    
+    height: 100%;
+    width: 100%;
+    margin: 24px;
+    background-color: bisque;
+}
