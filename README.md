@@ -28,3 +28,13 @@ mysql> show tables;
 ```
 mysql> select * from TABLE;
 ```
+
+### 会員登録用テーブルの作成例
+```
+mysql> create table `members` (
+    `id`        int not null auto_increment primary key,
+    `name`      varchar(100) not null,
+    `email`     varchar(100) not null,
+    `password`  varchar(100) not null
+) engine=InnoDB default charset=utf8;
+```
