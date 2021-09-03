@@ -38,3 +38,8 @@ mysql> create table `members` (
     `password`  varchar(100) not null
 ) engine=InnoDB default charset=utf8;
 ```
+
+### テーブル設計の表示
+```
+mysql> desc TABLE_NAME;
+```
