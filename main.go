@@ -28,6 +28,8 @@ func httpServer(){
 		c.HTML(http.StatusOK,"signup.html",gin.H{
 			//	サインアップする際はdbにアクセスする必要がある
 			//	html側で{{.message}}で取得したものを表示可能
+			//	本番では
+			//	uri:	api/signup (POST)
 			"message" : mysqlQuery(),
 		})
 	})
@@ -55,6 +57,43 @@ func mysqlQuery() string {
 	return name 
 }
 
+type UserField struct {
+	// ID			int		`json:"id"`
+	Name 		string	`json:"name"`
+	Email		string	`json:"email"`
+	Password	string	`json:"password"`
+}
+
 func main() {
-	httpServer()
+	// httpServer()
+
+	//	api仕様
+	//	/api/v1/users
+		//	/
+		//	/add
+		//	/update
+		//	/delete
+
+	engine := gin.Default()
+
+	engine.POST("/api/v1/users/add",func(c *gin.Context){
+		var user UserField
+		err := c.ShouldBindJSON(&user)
+		if err != nil {
+			c.JSON(http.StatusBadRequest,gin.H{
+				"error": err.Error(),
+			})
+			return
+		}
+		c.JSON(
+			http.StatusOK,
+			gin.H{
+				"name"		:user.Name,
+				"email"		:user.Email,
+				"password"	:user.Password,
+			},
+		)
+	})
+
+	engine.Run(":3000")
 }
