@@ -3,6 +3,7 @@
 POST:   /api/v1/users/add
 リクエストヘッダ｛"name":"hoge","email":"hoge@hoge.com","password":"password"｝
 ```
+### 確認コマンド
 ```
 $ curl -XPOST http://localhost:3000/api/v1/users/add \
 -H "Content-Type: application/json" \
