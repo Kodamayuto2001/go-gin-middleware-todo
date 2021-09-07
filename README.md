@@ -1,3 +1,15 @@
+### API仕様
+```
+POST:   /api/v1/users/add
+リクエストヘッダ｛"name":"hoge","email":"hoge@hoge.com","password":"password"｝
+```
+```
+$ curl -XPOST http://localhost:3000/api/v1/users/add \
+-H "Content-Type: application/json" \
+-d '{"name":"hoge","email":"hoge@hoge.com","password":"password"}'
+```
+
+
 ### wsl:ubuntu-LTS mysql起動
 ```
 $ sudo service mysql start
