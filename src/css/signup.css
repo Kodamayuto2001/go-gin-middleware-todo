@@ -5,20 +5,24 @@
 
 header {
     height: 40px;
-    background-color: aliceblue;
+    background-color: #0c162d;
 }
 
 main {
     margin-top: 10%;
     margin-left: 20%;
     margin-right: 20%;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
     background-color: #0c162d;
     height: 256px;
     width: 512px;
@@ -29,10 +33,43 @@ form {
     font-weight: 500;
 }
 
-table {
+/* table {
     
     height: 100%;
     width: 100%;
     margin: 24px;
     background-color: bisque;
+} */
+
+table {
+    /* background-color: bisque; */
+    width: 100%;
+}
+
+thead {
+    height: 80px;
+}
+
+/* tbody {
+    background-color: blueviolet;
+} */
+
+tbody tr td label {
+    margin-left: 50px;
+    padding-right: 80px;
+}
+
+
+tbody tr td input {
+    right: 0px;
+    margin-left: 10px;
+}
+
+tbody tr td #password {
+    margin-left: -3px;
+}
+
+button {
+    margin-top: 50px;
+    width: 100px;
 }
