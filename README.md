@@ -3,12 +3,16 @@
 POST:   /api/v1/users/add
 リクエストヘッダ｛"name":"hoge","email":"hoge@hoge.com","password":"password"｝
 ```
-### 確認コマンド
+
+### APIをたたく
 ```
 $ curl -XPOST http://localhost:3000/api/v1/users/add \
 -H "Content-Type: application/json" \
 -d '{"name":"hoge","email":"hoge@hoge.com","password":"password"}'
 ```
+
+### DB確認
+![image](https://user-images.githubusercontent.com/55943803/132425375-0d18d594-ae45-44e0-9551-792f1ad2f1ea.png)
 
 
 ### wsl:ubuntu-LTS mysql起動
