@@ -7,7 +7,7 @@ import (
 	"github.com/joho/godotenv"
 	"os"
 	"log"
-	// "fmt"
+	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -64,6 +64,32 @@ type UserField struct {
 	Password	string	`json:"password"`
 }
 
+func userAdd(user *UserField) string {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal(err)
+	}
+	db,err := sql.Open("mysql",os.Getenv("DB_USER")+":"+os.Getenv("DB_PASSWORD")+"@/"+os.Getenv("DB_NAME"))
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
+
+	name 		:= user.Name
+	email 		:= user.Email
+	password 	:= user.Password
+
+	ins,err := db.Prepare("INSERT INTO members(name,email,password) VALUES(?,?,?)")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	ins.Exec(name,email,password)
+
+	message := fmt.Sprintf("\nname: %v\nemail: %v\npassword: %v\n",name,email,password)
+	return message
+}
+
 func main() {
 	// httpServer()
 
@@ -93,6 +119,10 @@ func main() {
 				"password"	:user.Password,
 			},
 		)
+		
+		//	クエリの実行（insert）
+		message := userAdd(&user)
+		c.String(http.StatusOK,message)
 	})
 
 	engine.Run(":3000")
