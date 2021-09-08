@@ -1,7 +1,7 @@
 ### API仕様
 ```
 POST:   /api/v1/users/add
-リクエストヘッダ｛"name":"hoge","email":"hoge@hoge.com","password":"password"｝
+json｛"name":"hoge","email":"hoge@hoge.com","password":"password"｝
 ```
 
 ### APIをたたく
