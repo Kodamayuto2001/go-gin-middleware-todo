@@ -1,6 +1,7 @@
 ### API仕様
 ```
 POST:   /api/v1/users/add
+Header: Content-Type application/json
 json｛"name":"hoge","email":"hoge@hoge.com","password":"password"｝
 ```
 
@@ -13,9 +14,11 @@ $ curl -XPOST http://localhost:3000/api/v1/users/add \
 
 ### APIをたたく
 ![image](https://user-images.githubusercontent.com/55943803/132595069-455ebc7c-f4a0-439a-ba63-f186f23ca4e4.png)
+![image](https://user-images.githubusercontent.com/55943803/132595935-9581914c-0f21-44c2-9c64-ef095b942553.png)
+
 
 ### DB確認
-![image](https://user-images.githubusercontent.com/55943803/132595123-8a83836e-f228-4d97-8eca-b7765d04436a.png)
+![image](https://user-images.githubusercontent.com/55943803/132596022-103bc58a-170a-4b7c-b1c7-223f6f8892cc.png)
 
 
 ### wsl:ubuntu-LTS mysql起動
