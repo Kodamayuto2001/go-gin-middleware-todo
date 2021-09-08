@@ -11,8 +11,11 @@ $ curl -XPOST http://localhost:3000/api/v1/users/add \
 -d '{"name":"hoge","email":"hoge@hoge.com","password":"password"}'
 ```
 
+### APIをたたく
+![image](https://user-images.githubusercontent.com/55943803/132595069-455ebc7c-f4a0-439a-ba63-f186f23ca4e4.png)
+
 ### DB確認
-![image](https://user-images.githubusercontent.com/55943803/132425375-0d18d594-ae45-44e0-9551-792f1ad2f1ea.png)
+![image](https://user-images.githubusercontent.com/55943803/132595123-8a83836e-f228-4d97-8eca-b7765d04436a.png)
 
 
 ### wsl:ubuntu-LTS mysql起動
