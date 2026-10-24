@@ -8,7 +8,6 @@ function handleEvent(event) {
         email: email, 
         password: password 
     });
-    console.log(data)
 
     let client = new XMLHttpRequest();
     client.open('POST', 'http://localhost:3000/api/v1/users/add');
